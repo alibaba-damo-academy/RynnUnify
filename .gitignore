@@ -1,0 +1,54 @@
+# OS/editor files
+.DS_Store
+._*
+__MACOSX/
+*.crswap
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python/build environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Local models, datasets, and generated artifacts
+checkpoints/
+models/
+runs/
+outputs/
+artifacts/
+logs/
+wandb/
+/data/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.mp4
+*.parquet
+*.log
+*.zip
+*.tar
+*.tar.gz
+
+# User-supplied media for the visual-planning format template
+/VisualPlan/examples/media/

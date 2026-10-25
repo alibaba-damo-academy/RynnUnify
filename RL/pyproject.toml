@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rynnunify-rl"
+version = "0.1.0"
+description = "Branch-Conditional Policy Optimization for generation-assisted visual reasoning"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.10"
+dependencies = ["torch>=2.6,<3", "torchvision>=0.21,<1", "httpx>=0.27,<1", "Pillow>=10", "numpy>=1.26", "av>=14"]
+
+[project.optional-dependencies]
+train = ["transformers>=5.3,<6", "accelerate>=1.0"]
+eval = ["openai>=1.0", "httpx[http2]>=0.27", "pyarrow>=16", "tqdm", "opencv-python-headless"]
+serve = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "diffusers>=0.35,<1", "transformers>=5.3,<6", "accelerate>=1", "sentencepiece", "ftfy"]
+dev = ["pytest>=8", "build", "ruff"]
+
+[project.scripts]
+rynn-rl-serve-generator = "rynn_rl.serve_generator:main"
+rynn-rl-serve-judge = "rynn_rl.serve_judge:main"
+rynn-rl-train = "rynn_rl.train:main"
+rynn-rl-evaluate = "rynn_rl.evaluate:main"
+
+[tool.setuptools.packages.find]
+include = ["rynn_rl*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 119
+exclude = ["third_party", "projects", "rynn_rl/legacy"]
+
+[tool.ruff.lint]
+select = ["F", "E9"]

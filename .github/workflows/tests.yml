@@ -1,0 +1,33 @@
+name: Tests
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  visual-planning-cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 VisualPlan/tests/run_tests.py
+      - run: bash -n VisualPlan/run_interleave.sh
+
+  rl-cpu-contracts:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: RL
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install "torch>=2.6,<3" "torchvision>=0.21,<1" --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e '.[dev,train,serve]'
+      - run: python -m pytest -q
+      - run: ruff check rynn_rl tests
+      - run: python -m build

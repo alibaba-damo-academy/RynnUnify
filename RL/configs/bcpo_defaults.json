@@ -1,0 +1,18 @@
+{
+  "algorithm": "branch_conditional_gspo_with_soft_route",
+  "questions_per_update": 64,
+  "trajectories_per_question": 8,
+  "routable_direct": 4,
+  "routable_generate": 4,
+  "native_direct": 8,
+  "learning_rate": 1e-06,
+  "epochs": 1,
+  "clip_low": 0.0003,
+  "clip_high": 0.0004,
+  "route_temperature": 0.1,
+  "route_weight": 0.01,
+  "kl_weight": 0.001,
+  "entropy_weight": 0.001,
+  "route_cost": 0.0,
+  "note": "Reference defaults. Configure training with CLI arguments; loss coefficients are defined by LossConfig."
+}

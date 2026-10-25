@@ -1,0 +1,1 @@
+{"id": "example-001", "high_level_task": "Place the cup on the tray.", "sub_plan": [{"plan_index": 0, "instruction": "Pick up the cup.", "first_frame_path": "media/step_000.jpg"}, {"plan_index": 1, "instruction": "Place the cup on the tray.", "first_frame_path": "media/step_001.jpg"}]}
