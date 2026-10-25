@@ -1,17 +1,16 @@
 ### RynnUnify
 
 <p align="center">
-  <img src="assets/wordmark.png" width="455" alt="RynnUnify"><br>
+  <picture><img src="assets/wordmark.png" width="455" alt="RynnUnify"></picture><br>
   <strong><em>Agentic Embodied Intelligence via Reciprocal VLM Reasoning and World Modeling</em></strong>
 </p>
 
-<!-- Add URLs to the five resource labels below when available. -->
 <p align="center">
-  <img src="assets/icons/project-page.svg" width="20" height="20" alt=""> <b>Project Page</b> &nbsp;&nbsp;|&nbsp;&nbsp;
-  <img src="assets/icons/hugging-face.svg" width="20" height="20" alt=""> <b>Hugging Face</b> &nbsp;&nbsp;|&nbsp;&nbsp;
-  <img src="assets/icons/modelscope.svg" width="20" height="20" alt=""> <b>ModelScope</b> &nbsp;&nbsp;|&nbsp;&nbsp;
-  <img src="assets/icons/arxiv.svg" width="20" height="20" alt=""> <b>arXiv</b> &nbsp;&nbsp;|&nbsp;&nbsp;
-  <img src="assets/icons/paper.svg" width="20" height="20" alt=""> <b>Paper</b>
+  <picture><img src="assets/icons/project-page.svg" width="20" height="20" alt=""></picture> <a href="https://alibaba-damo-academy.github.io/RynnUnify.github.io/"><b>Project Page</b></a> &nbsp;&nbsp;|&nbsp;&nbsp;
+  <picture><img src="assets/icons/hugging-face.svg" width="20" height="20" alt=""></picture> <a href="https://huggingface.co/collections/Alibaba-DAMO-Academy/rynnunify"><b>Hugging Face</b></a> &nbsp;&nbsp;|&nbsp;&nbsp;
+  <picture><img src="assets/icons/modelscope.svg" width="20" height="20" alt=""></picture> <a href="https://www.modelscope.cn/collections/DAMO_Academy/RynnUnify"><b>ModelScope</b></a> &nbsp;&nbsp;|&nbsp;&nbsp;
+  <picture><img src="assets/icons/arxiv.svg" width="20" height="20" alt=""></picture> <b>arXiv</b> &nbsp;&nbsp;|&nbsp;&nbsp;
+  <picture><img src="assets/icons/paper.svg" width="20" height="20" alt=""></picture> <a href="RynnUnify.pdf"><b>Paper</b></a>
 </p>
 
 ## Introduction
