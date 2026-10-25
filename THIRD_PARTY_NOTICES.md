@@ -6,7 +6,7 @@ The existing visual-planning files carry NVIDIA copyright notices and the SPDX i
 
 ## Reinforcement learning and Relax
 
-The RL component retains its Apache-2.0 license, NOTICE, and [third-party notices](RL/THIRD_PARTY_NOTICES.md). Vendored Relax components retain the license and notices in [RL/third_party/Relax](RL/third_party/Relax/).
+The BCPO component retains its Apache-2.0 license, NOTICE, and [third-party notices](BCPO/THIRD_PARTY_NOTICES.md). Vendored Relax components retain the license and notices in [BCPO/third_party/Relax](BCPO/third_party/Relax/).
 
 ## Manuscript figures
 

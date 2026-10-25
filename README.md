@@ -21,7 +21,7 @@ We present **RynnUnify**, a **Mixture-of-Transformers** architecture with an aut
 - **Unified Embodied Brain.** RynnUnify brings embodied cognition, spatial grounding, and video generation into one architecture, connecting scene understanding with predictions of how the physical world evolves.
 - **Interleaved Visual Planning.** RynnUnify alternates subtask reasoning with video prediction, using each generated outcome to plan the next step. Cross-chunk scene memory, self-forcing training, and adaptive durations support coherent visual planning over long horizons.
 - **Agentic Interleaved Thinking.** An RL-trained agent learns when to answer directly and when to generate visual evidence. Through BCPO, it learns to formulate generation requests, interpret predicted outcomes, and select the reasoning path that benefits the task.
-- **Connect Prediction to Action.** The World-Action Model (**WAM**) extension couples latent subtask planning with joint video-action training, translating predictive world representations into robot control for composite manipulation tasks.
+- **Connect Prediction to Action.** The World-Action Model (**WAM**) extension translates predictive world representations into robot control through joint video-action training, supporting composite manipulation tasks.
 
 <p align="center">
   <img src="assets/teaser.png" width="80%" alt="RynnUnify overview: embodied understanding, long-horizon visual planning, agentic reasoning, and robot action">
@@ -45,7 +45,7 @@ BCPO samples four direct and four generation-assisted trajectories for each rout
   <img src="assets/agentic-rl.png" width="80%" alt="BCPO training: direct and generation-assisted branches, within-branch optimization, and learned routing">
 </p>
 
-See the [algorithm](RL/docs/algorithm.md), [reward definitions](RL/docs/rewards.md), and [service interfaces](RL/docs/services.md).
+See the [algorithm](BCPO/docs/algorithm.md), [reward definitions](BCPO/docs/rewards.md), and [service interfaces](BCPO/docs/services.md).
 
 ## Performance
 
@@ -110,16 +110,16 @@ Please refer to [RynnScale](https://github.com/alibaba-damo-academy/RynnScale) f
 
 ### Agentic RL (BCPO)
 
-Install the RL package in a separate environment:
+Install the BCPO package in a separate environment:
 
 ```bash
-cd RL
+cd BCPO
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[train,eval,serve]'
 ```
 
-Prepare a compatible Reasoner checkpoint, [training/evaluation JSONL](RL/docs/data.md), and a frozen Generator service. Start a Judge service for `text` / `mess` tasks; see [service setup](RL/README.md#deployment). Then train and evaluate:
+Prepare a compatible Reasoner checkpoint, [training/evaluation JSONL](BCPO/docs/data.md), and a frozen Generator service. Start a Judge service for `text` / `mess` tasks; see [service setup](BCPO/README.md#deployment). Then train and evaluate:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 \
@@ -130,7 +130,7 @@ JUDGE_URL=http://127.0.0.1:8001/v1 JUDGE_MODEL=judge \
 RUN_DIR=runs/bcpo BATCH_SIZE=1 bash scripts/train_and_evaluate.sh
 ```
 
-Use a new `RUN_DIR` for each run. The script validates data, trains the Reasoner, then evaluates `train/final/` and writes results to `eval/`. Omit the Judge variables for tasks that do not need it. Start with `BATCH_SIZE=1` and adjust for available memory; each question produces eight trajectories. See [training options](RL/docs/training.md).
+Use a new `RUN_DIR` for each run. The script validates data, trains the Reasoner, then evaluates `train/final/` and writes results to `eval/`. Omit the Judge variables for tasks that do not need it. Start with `BATCH_SIZE=1` and adjust for available memory; each question produces eight trajectories. See [training options](BCPO/docs/training.md).
 
 ### Visual Planning Inference
 
@@ -148,7 +148,7 @@ Add `DRY_RUN=1` to inspect the command without loading models. Results include g
 
 ### Embodied Understanding Evaluation
 
-Please refer to [RynnScale](https://github.com/alibaba-damo-academy/RynnScale) for embodied understanding and reasoning evaluation using the Reasoner from RynnUnify-Base, and to the [RL evaluation guide](RL/docs/evaluation.md) for Agentic Interleaved Thinking evaluation.
+Please refer to [RynnScale](https://github.com/alibaba-damo-academy/RynnScale) for embodied understanding and reasoning evaluation using the Reasoner from RynnUnify-Base, and to the [BCPO evaluation guide](BCPO/docs/evaluation.md) for Agentic Interleaved Thinking evaluation.
 
 ---
 
@@ -157,8 +157,15 @@ Please refer to [RynnScale](https://github.com/alibaba-damo-academy/RynnScale) f
 ```bibtex
 @misc{rynnunify,
   title         = {RynnUnify: Towards Unified Embodied Brain},
-  author        = {TODO},
-  year          = {TODO},
+  author        = {Minghao Zhu and Bohan Hou and Kun Xiang and
+                  Zixuan Wang and Yinzhou Tang and Yifei Yang and
+                  Zhikai Wang and Tianyi Zhang and Kehan Li and
+                  Haoyu Zhao and Siteng Huang and Leigang Qu and
+                  Sicong Leng and Dongchi Huang and Mingxiu Chen and
+                  Shijian Lu and Yue Wang and Xiaodan Liang and
+                  Zhenyu Zeng and Deli Zhao and Chengju Liu and
+                  Jianfei Yang and Xin Li},
+  year          = {2026},
   eprint        = {TODO},
   archivePrefix = {arXiv},
   url           = {TODO}
@@ -197,4 +204,4 @@ For development checks and contribution guidelines, see the [contributing guide]
 
 ## License
 
-Project-authored code and documentation use [Apache-2.0](LICENSE). Existing **VisualPlan** source headers specify [OpenMDW-1.1](VisualPlan/LICENSE), and **RL** retains its [Apache-2.0 license](RL/LICENSE). Model weights, datasets, and manuscript figures have separate rights. See the [third-party notices](THIRD_PARTY_NOTICES.md).
+Project-authored code and documentation use [Apache-2.0](LICENSE). Existing **VisualPlan** source headers specify [OpenMDW-1.1](VisualPlan/LICENSE), and **BCPO** retains its [Apache-2.0 license](BCPO/LICENSE). Model weights, datasets, and manuscript figures have separate rights. See the [third-party notices](THIRD_PARTY_NOTICES.md).

@@ -1,6 +1,6 @@
 # RynnUnify Visual Planning
 
-[Project overview](../README.md) · [BCPO](../RL/README.md)
+[Project overview](../README.md) · [BCPO](../BCPO/README.md)
 
 Interleave **Reasoner** predictions with **Generator** rollouts: predict a subtask, future scene description and duration, generate a video chunk, then continue from its final frame. Scene memory and cross-chunk conditioning preserve context across steps.
 

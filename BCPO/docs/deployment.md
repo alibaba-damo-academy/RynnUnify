@@ -4,7 +4,7 @@ Use Linux with CUDA and Python 3.10+. Install a CUDA-compatible PyTorch build be
 
 ## Install
 
-Run from the `RL/` component directory:
+Run from the `BCPO/` component directory:
 
 ```bash
 python -m venv .venv

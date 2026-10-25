@@ -1,6 +1,6 @@
 # Contributing
 
-Keep visual-planning changes in `VisualPlan/` and reinforcement-learning changes in `RL/`. Each component owns its runtime dependencies and tests. Commands below start from the repository root unless noted otherwise.
+Keep visual-planning changes in `VisualPlan/` and reinforcement-learning changes in `BCPO/`. Each component owns its runtime dependencies and tests. Commands below start from the repository root unless noted otherwise.
 
 ## Development
 
@@ -10,10 +10,10 @@ Run visual-planning CPU checks from the repository root:
 python3 VisualPlan/tests/run_tests.py
 ```
 
-Run RL checks in its environment:
+Run BCPO checks in its environment:
 
 ```bash
-cd RL
+cd BCPO
 python -m pip install -e '.[dev,train,serve]'
 python -m pytest -q
 ruff check rynn_rl tests

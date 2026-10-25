@@ -6,7 +6,7 @@ Train visual reasoners with **Branch-Conditional Policy Optimization (BCPO)** an
 
 ## Installation
 
-Use Linux, Python 3.10+, and a CUDA-compatible PyTorch installation. Run the following commands from the `RL/` component directory:
+Use Linux, Python 3.10+, and a CUDA-compatible PyTorch installation. Run the following commands from the `BCPO/` component directory:
 
 ```bash
 python -m venv .venv
