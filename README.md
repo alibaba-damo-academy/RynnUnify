@@ -154,20 +154,19 @@ Please refer to [RynnScale](https://github.com/alibaba-damo-academy/RynnScale) f
 ## Citation
 
 ```bibtex
-@misc{rynnunify,
-  title         = {RynnUnify: Towards Unified Embodied Brain},
-  author        = {Minghao Zhu and Bohan Hou and Kun Xiang and
-                  Zixuan Wang and Yinzhou Tang and Yifei Yang and
-                  Zhikai Wang and Tianyi Zhang and Kehan Li and
-                  Haoyu Zhao and Siteng Huang and Leigang Qu and
-                  Sicong Leng and Dongchi Huang and Mingxiu Chen and
-                  Shijian Lu and Yue Wang and Xiaodan Liang and
-                  Zhenyu Zeng and Deli Zhao and Chengju Liu and
-                  Jianfei Yang and Xin Li},
-  year          = {2026},
-  eprint        = {TODO},
-  archivePrefix = {arXiv},
-  url           = {TODO}
+@article{damo2026rynnunify,
+  title={RynnUnify: Towards Unified Embodied Brain},
+  author={Minghao Zhu and Bohan Hou and Kun Xiang and
+          Zixuan Wang and Yinzhou Tang and Yifei Yang and
+          Zhikai Wang and Tianyi Zhang and Kehan Li and
+          Haoyu Zhao and Siteng Huang and Leigang Qu and
+          Sicong Leng and Dongchi Huang and Mingxiu Chen and
+          Shijian Lu and Yue Wang and Xiaodan Liang and
+          Zhenyu Zeng and Deli Zhao and Chengju Liu and
+          Jianfei Yang and Xin Li},
+  journal={arXiv preprint arXiv:2610.32965},
+  year={2026},
+  url={https://arxiv.org/abs/2610.32965}
 }
 ```
 
