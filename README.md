@@ -9,7 +9,7 @@
   <picture><img src="assets/icons/project-page.svg" width="20" height="20" align="absmiddle" alt=""></picture> <a href="https://alibaba-damo-academy.github.io/RynnUnify.github.io/"><b>Project Page</b></a> &nbsp;&nbsp;|&nbsp;&nbsp;
   <picture><img src="assets/icons/hugging-face.svg" width="20" height="20" align="absmiddle" alt=""></picture> <a href="https://huggingface.co/collections/Alibaba-DAMO-Academy/rynnunify"><b>Hugging Face</b></a> &nbsp;&nbsp;|&nbsp;&nbsp;
   <picture><img src="assets/icons/modelscope.svg" width="20" height="20" align="absmiddle" alt=""></picture> <a href="https://www.modelscope.cn/collections/DAMO_Academy/RynnUnify"><b>ModelScope</b></a> &nbsp;&nbsp;|&nbsp;&nbsp;
-  <picture><img src="assets/icons/arxiv.svg" width="20" height="20" align="absmiddle" alt=""></picture> <b>arXiv</b> &nbsp;&nbsp;|&nbsp;&nbsp;
+  <picture><img src="assets/icons/arxiv.svg" width="20" height="20" align="absmiddle" alt=""></picture> <a href="https://arxiv.org/abs/2610.32965"><b>arXiv</b></a> &nbsp;&nbsp;|&nbsp;&nbsp;
   <picture><img src="assets/icons/paper.svg" width="20" height="20" align="absmiddle" alt=""></picture> <a href="RynnUnify.pdf"><b>Paper</b></a>
 </p>
 
